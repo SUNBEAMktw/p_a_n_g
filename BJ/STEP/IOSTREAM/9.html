@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>pang</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="icon" href="../../../favicon.ico">
+  <link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/base16/ashes.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] }
+    });
+</script>
+<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  <div style="text-align:center"><a href="../../../index.html">pang</a></div>
+  <div style="text-align:center"><a href="../../index.html">단계별로 풀어보기</a></div>
+  <center><a href="index.html">입출력과 사칙연산</a></center>
+  <div style="text-align:center">10869: 사칙연산</div>
+  <p style="text-align:left;"><a href="8.html">&larr;</a></p>
+<p>두 자연수 A와 B가 주어진다. 이떄, A+B, A-B, A*B, A/B, A%B를 출력하는 프로그램을 작성하시오.</p>
+<p>입력: 첫째 줄에 A와 B가 주어진다.(0 < A, B < 10)</p>
+<p>출력: 첫째 줄에 A+B, 둘째 줄에 A-B, 셋째 줄에 A*B, 넷째 줄에 A/B, 다섯째 줄에 A%B를 출력한다.</p>
+
+<pre><code>#include &lt;iostream&gt;
+int main()
+{
+    int a, b;
+    std::cin >> a >> b;
+    std::cout << a + b << "\n" <<
+                 a - b << "\n" <<
+                 a * b << "\n" <<
+                 a / b << "\n" <<
+                 a % b << std::endl;
+}</code></pre>
+
+<p style="text-align:right;"><a href="10.html">&rarr;</a></p>
+  </body>
+  </html>
