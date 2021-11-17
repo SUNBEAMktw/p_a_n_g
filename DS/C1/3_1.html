@@ -13,5 +13,23 @@
   <div style="text-align:center"><a href="3.html">데이터 추상화와 캡슐화</a></div>
   <p>1. <mark>NaturalNumber ADT</mark>에 다음 연산을 추가하라:
   <mark>Predecessor, IsGreater, Multiply, Divide.</p>
+    <pre><code>ADT NaturalNumber is
+      객체: 정수의 순서가 있는 부분 범위로서 0부터 해당 컴퓨터의 최대 정수(MAXINT)까지 값을 갖는다.
+      함수:
+        모든 x, y는 NaturalNumber의 원소이고 TRUE, FALSE는 Boolean의 원소이고
+        +, -, <, ==, =는 일반적ㅇ니 정수 연산에 대해
+
+        Zero():NaturalNumber       ::=   0
+        IsZero(x):Boolean          ::=   if(x==0)IsZero=TRUE
+                                         else IsZero=FALSE
+        Add(x,y):NaturalNumber     ::=   if(x+y<=MAXINT)Add=x+y
+                                         else Add=MAXINT
+        Equal(x,y):Boolean         ::=   if(x==y)Equal=TRUE
+                                         else Equal=FALSE
+        Successor(x):NaturalNumber ::=   if(x==MAXINT)Successor=x
+                                         else Successor=x+1
+        Subtract(x,y):NaturalNumber::=   if(x&lt;y)Subtract=0
+                                         else Subtract=x-y
+end NaturalNumber</code></pre>
   </body>
   </html>
