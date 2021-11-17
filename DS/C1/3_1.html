@@ -38,7 +38,7 @@
         Multiply(x,y):NaturalNumber ::=   if((x*y)>=MAXINT)Multiply=MAXINT
                                           else Multiply=x*y
         Divide(x,y):NaturalNumber   ::=   if(y==0)Divide=UNDEFINED
-                                          else Divide=x/y
+                                          else if((x%y)==0) Divide=x/y
 end NaturalNumber</code></pre>
   </body>
   </html>
