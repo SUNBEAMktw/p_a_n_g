@@ -15,21 +15,30 @@
   <mark>Predecessor, IsGreater, Multiply, Divide.</p>
     <pre><code>ADT NaturalNumber is
       객체: 정수의 순서가 있는 부분 범위로서 0부터 해당 컴퓨터의 최대 정수(MAXINT)까지 값을 갖는다.
+            UNDEFINED는 수학적으로 정의되지 않은 값이다.
       함수:
         모든 x, y는 NaturalNumber의 원소이고 TRUE, FALSE는 Boolean의 원소이고
-        +, -, <, ==, =는 일반적ㅇ니 정수 연산에 대해
+        +, -, <, ==, =는 일반적인  정수 연산에 대해
 
-        Zero():NaturalNumber       ::=   0
-        IsZero(x):Boolean          ::=   if(x==0)IsZero=TRUE
-                                         else IsZero=FALSE
-        Add(x,y):NaturalNumber     ::=   if(x+y<=MAXINT)Add=x+y
-                                         else Add=MAXINT
-        Equal(x,y):Boolean         ::=   if(x==y)Equal=TRUE
-                                         else Equal=FALSE
-        Successor(x):NaturalNumber ::=   if(x==MAXINT)Successor=x
-                                         else Successor=x+1
-        Subtract(x,y):NaturalNumber::=   if(x&lt;y)Subtract=0
-                                         else Subtract=x-y
+        Zero():NaturalNumber        ::=   0
+        IsZero(x):Boolean           ::=   if(x==0)IsZero=TRUE
+                                          else IsZero=FALSE
+        Add(x,y):NaturalNumber      ::=   if(x+y<=MAXINT)Add=x+y
+                                          else Add=MAXINT
+        Equal(x,y):Boolean          ::=   if(x==y)Equal=TRUE
+                                          else Equal=FALSE
+        Successor(x):NaturalNumber  ::=   if(x==MAXINT)Successor=x
+                                          else Successor=x+1
+        Subtract(x,y):NaturalNumber ::=   if(x&lt;y)Subtract=0
+                                          else Subtract=x-y
+        Predecessor(x):NaturalNumber::=   if(x==0)Predecessor=x
+                                          else Predecessor=x-1
+        IsGreater(x,y):Boolean      ::=   if(x>y)IsGreater=TRUE
+                                          else IsGreater=FALSE
+        Multiply(x,y):NaturalNumber ::=   if((x*y)>=MAXINT)Multiply=MAXINT
+                                          else Multiply=x*y
+        Divide(x,y):NaturalNumber   ::=   if(y==0)Divide=UNDEFINED
+                                          else Divide=x/y
 end NaturalNumber</code></pre>
   </body>
   </html>
