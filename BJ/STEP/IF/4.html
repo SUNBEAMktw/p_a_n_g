@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>pang</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="icon" href="../../../favicon.ico">
+  <link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/base16/ashes.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+</head>
+<body>
+  <div style="text-align:center"><a href="../../../index.html">pang</a></div>
+  <div style="text-align:center"><a href="../../index.html">단계별로 풀어보기</a></div>
+  <center><a href="index.html">if문</a></center>
+  <div style="text-align:center">14681: 사분면 고르기</div>
+  <p style="text-align:left;"><a href="3.html">&larr;</a></p>
+  <p>문제: 점의 좌표를 입력받아 그 점이 어느 사분면에 속하는지 알아내는 프로그램을 작성하시오.
+   단, x좌표와 y좌표는 모두 양수나 음수라고 가정한다.</p>
+  <p>첫 줄에는 정수 x가 주어진다. (−1000 ≤ x ≤ 1000; x ≠ 0) 다음 줄에는 정수 y가 주어진다. (−1000 ≤ y ≤ 1000; y ≠ 0)</p>
+  <p>점 (x, y)의 사분면 번호(1, 2, 3, 4 중 하나)를 출력한다.p>
+
+  <pre><code>#include <iostream>
+int main()
+{
+    int x, y;
+    std::cin >> x >> y;
+
+    if ((x>0)&&(y>0))
+        std::cout << 1 << std::endl;
+    else if ((x&lt;0)&&(y&gt;0))
+        std::cout << 2 << std::endl;
+    else if ((x<0)&&(y<0))
+        std::cout << 3 << std::endl;
+    else
+        std::cout << 4 << std::endl;
+    return 0;
+}</code></pre>
+<p style="text-align:right;"><a href="5.html">&rarr;</a></p>
+  </body>
+  </html>
