@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>pang</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/base16/ashes.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <div style="text-align:center"><a href="../../index.html">pang</a></div>
+  <div style="text-align:center"><a href="../index.html">C++ 자료구조론</a></div>
+  <center><a href="index.html">1장 기본 개념</a></center>
+  <div style="text-align:center">4. C++의 기초</div>
+  프로그램 1.5를 수정해서 <mark>int</mark> 타입의 예외를 발생시키도록 해 보라. 만일 <mark>a, b, c</mark>가 모두 0보다 작으면 발생된 예외 값은 1이어야 하고 만일 셋이 모두 0이면 예외 값은 2가 되어야 한다. 두 조건 중에 아무것도 충족되지 않으면 예외는 발생되지 않는다. 수정된 코드를 사용하고, 발생된 예외는 처리하고, 발생된 예외 값에 따라 메시지를 출력하는 <mark>main</mark> 함수를 작성하라. 작성된 코드를 테스트해 보라.
+  <pre><code>#include &lt;iostream&gt;
+int main() {
+	int a, b, c;
+
+	try {
+		std::cin >> a >> b >> c;
+
+		if (a &lt; 0 && b &lt; 0 && c &lt; 0) {
+			throw 1;
+		}
+		else if (a == 0 && b == 0 && c == 0) {
+			throw 2;
+		}
+
+		std::cout << a + b * c + b / c << std::endl;
+	}
+	catch (int x) {
+		std::cout << "오류 번호 " << x << " 번:" << std::endl;
+		if (x == 1)
+			std::cout << "모든 수가 0 미만입니다." << std::endl;
+		else if (x == 2)
+			std::cout << "모든 수가 0입니다" << std::endl;
+	}
+}</code></pre>
+  </body>
+  </html>
