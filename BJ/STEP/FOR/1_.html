@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>pang</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="icon" href="../../../favicon.ico">
+  <link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/base16/ashes.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <div style="text-align:center"><a href="../../../index.html">pang</a></div>
+  <div style="text-align:center"><a href="../../index.html">단계별로 풀어보기</a></div>
+  <center><a href="index.html">for문</a></center>
+  <div style="text-align:center">2439: 별 찍기 - 2</div>
+  <p style="text-align:left;"><a href="9.html">&larr;</a></p>
+  <p>문제: 첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제<br>
+    하지만, 오른쪽을 기준으로 정렬한 별을 출력하시오<p>
+  <p>입력: 첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.</p>
+  <p>출력: 첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.</p>
+  <pre><code>#include &lt;iostream&gt;
+int main()
+{
+    int n;
+    std::cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        for (int blank = 0; blank &lt; n - i; blank++) {
+            std::cout << ' ';
+        }
+        for (int star = 1; star <= i; star++) {
+            std::cout << '*';
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}</code></pre>
+<p style="text-align:right;"><a href="11.html">&rarr;</a></p>
+  </body>
+  </html>
